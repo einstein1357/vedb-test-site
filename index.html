@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>VEDB | Visionary Entertainment Data Base</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- PASTE YOUR CODEPEN HTML BACKUP BELOW THIS LINE -->
+
+
+  <div class="starfield"></div>
+
+  <div id="app" class="app-shell">
+    <header class="topbar">
+      <div class="brand" onclick="goHome()">
+        <div class="brand-orb">◎</div>
+        <div>
+          <h1>VEDB</h1>
+          <p>VISIONARY ENTERTAINMENT DATA BASE</p>
+        </div>
+      </div>
+  
+      <div class="search-area">
+        <button id="azButton" class="az-button" onclick="openActorIndexAZ()">A–Z</button>
+        <span class="search-left">⌕</span>
+        <input id="searchInput" type="text" placeholder="Search actors, movies, franchises..." autocomplete="off" />
+        <button id="searchButton">Search</button>
+        <div id="searchResults" class="search-results"></div>
+      </div>
+  
+      <nav class="nav">
+        <button onclick="goHome()">⌂ Home</button>
+        <button class="active" onclick="showActors()">♙ Actors</button>
+        <button onclick="showTitles()">▣ Titles</button>
+        <button onclick="showFranchises()">⬟ Franchises</button>
+        <button onclick="showCharts()">▥ Charts</button>
+        <button onclick="openWatchFinder()">◉ Watch Finder</button>
+        <button onclick="openUpcomingTrailers()">▷ Upcoming Trailers</button>
+        <button onclick="openBehindTheRole()">🎙 Behind the Role</button>
+        <button onclick="runVEDBAudit()">🧪 Run Audit</button>
+      </nav>
+    </header>
+  
+    <main id="mainPage" class="layout">
+      <section class="left-panel glass">
+        <div id="sphereTitle" class="panel-title">ACTOR SPHERE</div>
+  
+        <div class="sphere-wrap">
+          <div id="rotatingSphere" class="rotating-sphere">
+            <div class="sphere-wire one"></div>
+            <div class="sphere-wire two"></div>
+            <div class="sphere-wire three"></div>
+            <div class="glow-core"></div>
+            <div id="sphereNodes"></div>
+          </div>
+  
+          <div class="sphere-controls">
+            <label class="switch-row">
+              <span>Auto-rotate</span>
+              <label class="switch">
+                <input id="autoRotateToggle" type="checkbox" checked />
+                <span></span>
+              </label>
+            </label>
+  
+            <button onclick="resetSphere()">Reset Sphere</button>
+          </div>
+  
+          <p class="sphere-note">Drag the sphere or click a glowing tile.</p>
+        </div>
+      </section>
+  
+      <section class="right-panel glass">
+        <div class="actor-hero">
+          <div class="headshot-card">
+            <div id="entityInitials" class="headshot-initials">Z</div>
+            <div class="headshot-caption">Photo placeholder</div>
+          </div>
+  
+          <div class="hero-copy">
+            <div id="profileLabel" class="blue-label">PUBLIC ACTOR SPHERE</div>
+            <h2 id="entityName">ZENDAYA</h2>
+            <div id="entityJob" class="job-line">ACTRESS • PRODUCER</div>
+            <p id="entitySummary"></p>
+  
+            <div class="actions">
+              <button id="quickButton1">Biography</button>
+              <button id="quickButton2">Signature Work</button>
+              <button id="quickButton3">Awards</button>
+            </div>
+          </div>
+        </div>
+  
+        <div id="cardsGrid" class="cards-grid"></div>
+      </section>
+    </main>
+  
+    <section id="sectionPage" class="section-page" style="display:none;"></section>
+  
+    <footer>
+      VEDB demo website • Master 3.6 clean base • Actors • Titles • Franchises • Charts • Watch Finder • Upcoming Trailers • Behind the Role
+    </footer>
+  </div>
+  
+
+  <!-- PASTE YOUR CODEPEN HTML BACKUP ABOVE THIS LINE -->
+
+  <script src="script.js"></script>
+  <script src="titleExpansions.js"></script>
+  <script src="storySnapshots.js"></script>
+  <script src="careerLabels.js"></script>
+  <script src="fullBodyCredits.js"></script>
+  <script src="auditTools.js"></script>
+</body>
+</html>
